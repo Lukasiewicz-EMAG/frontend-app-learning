@@ -10,6 +10,7 @@ import ptMessages from './messages/pt.json';
 import itMessages from './messages/it.json';
 import ukMessages from './messages/uk.json';
 import deMessages from './messages/de.json';
+import plMessages from './messages/pl.json';
 import ruMessages from './messages/ru.json';
 import hiMessages from './messages/hi.json';
 import faIRMessages from './messages/fa_IR.json';
@@ -27,6 +28,7 @@ const appMessages = {
   pt: ptMessages,
   it: itMessages,
   de: deMessages,
+  pl: plMessages,
   hi: hiMessages,
   'fa-ir': faIRMessages,
   'fr-ca': frCAMessages,
