@@ -69,8 +69,8 @@ const UnitNavigation = ({
 
   return (
     <div className="unit-navigation d-flex">
-      {renderPreviousButton()}
-      {renderNextButton()}
+      {/* {renderPreviousButton()}
+      {renderNextButton()} */}
     </div>
   );
 };
