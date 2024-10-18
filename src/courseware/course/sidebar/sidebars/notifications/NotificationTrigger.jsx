@@ -25,32 +25,33 @@ const NotificationTrigger = ({
   /* Re-show a red dot beside the notification trigger for each of the 7 UpgradeNotification stages
    The upgradeNotificationCurrentState prop will be available after UpgradeNotification mounts. Once available,
   compare with the last state they've seen, and if it's different then set dot back to red */
-  function UpdateUpgradeNotificationLastSeen() {
-    if (upgradeNotificationCurrentState) {
-      if (getLocalStorage(`upgradeNotificationLastSeen.${courseId}`) !== upgradeNotificationCurrentState) {
-        setNotificationStatus('active');
-        setLocalStorage(`notificationStatus.${courseId}`, 'active');
-        setLocalStorage(`upgradeNotificationLastSeen.${courseId}`, upgradeNotificationCurrentState);
-      }
-    }
-  }
+  // function UpdateUpgradeNotificationLastSeen() {
+  //   if (upgradeNotificationCurrentState) {
+  //     if (getLocalStorage(`upgradeNotificationLastSeen.${courseId}`) !== upgradeNotificationCurrentState) {
+  //       setNotificationStatus('active');
+  //       setLocalStorage(`notificationStatus.${courseId}`, 'active');
+  //       setLocalStorage(`upgradeNotificationLastSeen.${courseId}`, upgradeNotificationCurrentState);
+  //     }
+  //   }
+  // }
 
   if (!getLocalStorage(`notificationStatus.${courseId}`)) {
-    setLocalStorage(`notificationStatus.${courseId}`, 'active'); // Show red dot on notificationTrigger until seen
+    // setLocalStorage(`notificationStatus.${courseId}`, 'active'); // Show red dot on notificationTrigger until seen
   }
 
   if (!getLocalStorage(`upgradeNotificationCurrentState.${courseId}`)) {
-    setLocalStorage(`upgradeNotificationCurrentState.${courseId}`, 'initialize');
+    // setLocalStorage(`upgradeNotificationCurrentState.${courseId}`, 'initialize');
   }
 
   useEffect(() => {
-    UpdateUpgradeNotificationLastSeen();
+    // UpdateUpgradeNotificationLastSeen();
   });
 
   return (
-    <SidebarTriggerBase onClick={onClick} ariaLabel={intl.formatMessage(messages.openNotificationTrigger)}>
-      <NotificationIcon status={notificationStatus} notificationColor="bg-danger-500" />
-    </SidebarTriggerBase>
+    // <SidebarTriggerBase onClick={onClick} ariaLabel={intl.formatMessage(messages.openNotificationTrigger)}>
+    //   <NotificationIcon status={notificationStatus} notificationColor="bg-danger-500" />
+    // </SidebarTriggerBase>
+    <span></span>
   );
 };
 
