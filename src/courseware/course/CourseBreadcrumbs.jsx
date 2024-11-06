@@ -22,7 +22,7 @@ const CourseBreadcrumb = ({
     (destination) => destination.default,
   )[0] || { id: courseId, label: '', sequences: [] };
 
-  const showRegularLink = getConfig().ENABLE_JUMPNAV !== 'true' || content.length < 2 || !isStaff;
+  const showRegularLink = getConfig().ENABLE_JUMPNAV !== 'true' || content.length < 2;
   const [isOpen, open, close] = useToggle(false);
   const [target, setTarget] = useState(null);
   return (
