@@ -64,7 +64,7 @@
 
         .collapsible-trigger {
             border-radius: 0;
-            padding: map-get($spacers, 3\.5) map-get($spacers, 4) map-get($spacers, 3\.5) map-get($spacers, 5);
+            padding: 0.75rem 1.25rem 0.75rem 1.75rem;
 
             @media (max-width: -1 + map-get($grid-breakpoints, "sm")) {
                 padding-left: map-get($spacers, 4);
