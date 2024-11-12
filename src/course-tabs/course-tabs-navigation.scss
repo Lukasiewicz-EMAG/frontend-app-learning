@@ -3,7 +3,7 @@
   background-color: $c-decoration-color;
   border-top: 1px solid $c-course-tab-top-border-color;
   border-bottom: 1px solid $c-course-tab-bottom-border-color;
-  transition: background-color $transition-time $transition-type;
+  transition: background-color $c-transition-time $c-transition-type;
 
   .nav a,
   .nav button {
