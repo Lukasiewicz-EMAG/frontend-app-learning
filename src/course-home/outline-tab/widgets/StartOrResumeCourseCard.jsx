@@ -55,9 +55,6 @@ const StartOrResumeCourseCard = ({ intl }) => {
           </Button>
         )}
       />
-      {/* Footer is needed for internal vertical spacing to work out. If you can remove, be my guest */}
-      {/* eslint-disable-next-line react/jsx-no-useless-fragment */}
-      <Card.Footer><></></Card.Footer>
     </Card>
   );
 };

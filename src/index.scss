@@ -18,6 +18,15 @@ $c-course-tab-bottom-border-color: #b9cef1;
 $c-transition-time: 0.25s;
 $c-transition-type: ease-in-out;
 
+@mixin collapsible-decorator {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 100%;
+  background-color: $c-decoration-color;
+}
+
 #root {
   display: flex;
   flex-direction: column;
@@ -444,14 +453,21 @@ $c-transition-type: ease-in-out;
 .collapsible-trigger {
   position: relative;
   border-bottom: unset !important;
+  padding: .75rem 1.25rem 0.75rem 2rem !important;
 
   &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 15px;
-    height: 100%;
-    background-color: $c-decoration-color;
+    @include collapsible-decorator;
+  }
+}
+
+.collapsible-card-lg {
+  .collapsible-body {
+    padding-left: 2rem;
+    position: relative;
+
+    &::after {
+      @include collapsible-decorator;
+    }
   }
 }
 
@@ -465,6 +481,18 @@ $c-transition-type: ease-in-out;
 
 .pgn-transition-replace-group > div {
   padding: 0 !important;
+}
+
+.pgn__card {
+  .pgn__card-header {
+    align-items: center;
+    padding: 1rem 1.25rem;
+
+    .pgn__card-header-content,
+    .pgn__card-header-actions {
+      margin: 0;
+    }
+  }
 }
 
 // Import component-specific sass files
