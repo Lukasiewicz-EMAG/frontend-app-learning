@@ -17,11 +17,13 @@ $c-course-tab-top-border-color: $c-blue;
 $c-course-tab-bottom-border-color: #b9cef1;
 $c-transition-time: 0.25s;
 $c-transition-type: ease-in-out;
+$c-courseware-border-radius: 10px;
 
 @mixin collapsible-decorator {
   content: "";
   position: absolute;
   left: 0;
+  top: 0;
   width: 15px;
   height: 100%;
   background-color: $c-decoration-color;
@@ -97,7 +99,8 @@ $c-transition-type: ease-in-out;
 .sequence {
   @media (min-width: map-get($grid-breakpoints, "sm")) {
     border: solid 1px #eaeaea;
-    border-radius: 4px;
+    border-radius: $c-courseware-border-radius;
+    overflow: hidden;
   }
 }
 
@@ -191,7 +194,8 @@ $c-transition-type: ease-in-out;
   }
 
   .sequence-navigation-tabs {
-    overflow: auto;
+    overflow: hidden;
+
     .btn {
       flex-basis: 100%;
       min-width: 3rem;
@@ -288,7 +292,7 @@ $c-transition-type: ease-in-out;
 
     @media (min-width: map-get($grid-breakpoints, "sm")) {
       border-left-width: 1px;
-      border-top-left-radius: 4px;
+      border-top-left-radius: $c-courseware-border-radius;
     }
   }
 
@@ -297,8 +301,8 @@ $c-transition-type: ease-in-out;
     border-right-width: 0;
 
     @media (min-width: map-get($grid-breakpoints, "sm")) {
-      border-top-right-radius: 4px;
       border-right-width: 1px;
+      border-top-right-radius: $c-courseware-border-radius;
     }
   }
 }
@@ -462,7 +466,7 @@ $c-transition-type: ease-in-out;
 
 .collapsible-card-lg {
   .collapsible-body {
-    padding-left: 2rem;
+    padding-left: 2rem !important;
     position: relative;
 
     &::after {
@@ -486,13 +490,22 @@ $c-transition-type: ease-in-out;
 .pgn__card {
   .pgn__card-header {
     align-items: center;
-    padding: 1rem 1.25rem;
+    padding: 1rem 1.25rem !important;
 
     .pgn__card-header-content,
     .pgn__card-header-actions {
-      margin: 0;
+      margin-top: 0 !important;
     }
   }
+}
+
+.compass-btn {
+  padding: 10px 40px;
+  border-radius: 15px;
+  font-weight: 700 !important;
+  transition: background-color $transition-time $transition-type !important;
+  background-color: $blue;
+  color: $white ;
 }
 
 // Import component-specific sass files
