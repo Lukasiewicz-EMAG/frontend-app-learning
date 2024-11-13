@@ -514,6 +514,10 @@ $c-courseware-border-radius: 10px;
       color: $c-white;
       text-decoration: none;
     }
+
+    &:focus {
+      border: 2px solid $c-blue;
+    }
   }
 }
 
