@@ -1,6 +1,3 @@
-$primary-500: #2E6CD3;
-$brand-500: #2eb2d3;
-
 @import "~@edx/brand/paragon/fonts";
 @import "~@edx/brand/paragon/variables";
 @import "~@openedx/paragon/scss/core/core";
@@ -503,9 +500,10 @@ $c-courseware-border-radius: 10px;
 }
 
 .btn {
+  border-radius: $c-courseware-border-radius !important;
+
   &.btn-brand {
     padding: 10px 40px;
-    border-radius: 15px;
     font-weight: 700 !important;
     transition: background-color $c-transition-time $c-transition-type;
     background-color: $c-blue;
@@ -527,6 +525,20 @@ $c-courseware-border-radius: 10px;
       &::before {
         border: 2px solid $c-blue;
       }
+    }
+  }
+}
+
+.btn-icon {
+  .btn-icon-primary {
+    &:hover,
+    &:active {
+      background-color: $c-blue !important;
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 0 2px $c-blue !important;
+      color: $c-blue !important
     }
   }
 }
