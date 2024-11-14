@@ -113,7 +113,7 @@ const SequenceLink = ({
             <span className="sr-only">
               , {intl.formatMessage(complete ? messages.completedAssignment : messages.incompleteAssignment)}
             </span>
-            <EffortEstimate className="ml-3 align-middle" block={sequence} />
+            <EffortEstimate className="ml-3" block={sequence} />
           </div>
         </div>
         {hideFromTOC && (

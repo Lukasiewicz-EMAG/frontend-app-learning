@@ -17,7 +17,7 @@ $c-course-tab-top-border-color: $c-blue;
 $c-course-tab-bottom-border-color: #b9cef1;
 $c-transition-time: 0.25s;
 $c-transition-type: ease-in-out;
-$c-courseware-border-radius: 10px;
+$c-border-radius: 10px;
 
 @mixin collapsible-decorator {
   content: "";
@@ -99,7 +99,7 @@ $c-courseware-border-radius: 10px;
 .sequence {
   @media (min-width: map-get($grid-breakpoints, "sm")) {
     border: solid 1px #eaeaea;
-    border-radius: $c-courseware-border-radius;
+    border-radius: $c-border-radius;
     overflow: hidden;
   }
 }
@@ -292,7 +292,7 @@ $c-courseware-border-radius: 10px;
 
     @media (min-width: map-get($grid-breakpoints, "sm")) {
       border-left-width: 1px;
-      border-top-left-radius: $c-courseware-border-radius;
+      border-top-left-radius: $c-border-radius;
     }
   }
 
@@ -302,7 +302,7 @@ $c-courseware-border-radius: 10px;
 
     @media (min-width: map-get($grid-breakpoints, "sm")) {
       border-right-width: 1px;
-      border-top-right-radius: $c-courseware-border-radius;
+      border-top-right-radius: $c-border-radius;
     }
   }
 }
@@ -500,13 +500,18 @@ $c-courseware-border-radius: 10px;
   }
 }
 
+.expand-all-btn {
+  font-weight: 700 !important;
+  margin-right: 1.25rem;
+}
+
 .btn {
-  border-radius: $c-courseware-border-radius !important;
+  border-radius: $c-border-radius !important;
+  transition: background-color $c-transition-time $c-transition-type;
 
   &.btn-brand {
     padding: 10px 40px;
     font-weight: 700 !important;
-    transition: background-color $c-transition-time $c-transition-type;
     background-color: $c-blue;
     border: none;
     color: $c-white;
@@ -528,10 +533,27 @@ $c-courseware-border-radius: 10px;
       }
     }
   }
+
+  &.btn-outline-primary {
+    background-color: $c-white;
+    border: 1px solid $c-blue;
+    color: $c-blue;
+
+    &:hover {
+      border: 1px solid $c-blue;
+      color: $c-blue;
+    }
+
+    &:focus {
+      &::before {
+        border: 2px solid $c-blue;
+      }
+    }
+  }
 }
 
 .btn-icon {
-  .btn-icon-primary {
+  &.btn-icon-primary {
     &:hover,
     &:active {
       background-color: $c-blue !important;
