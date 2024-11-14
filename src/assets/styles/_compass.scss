@@ -53,9 +53,7 @@
   }
 }
 
-
 .expand-all-btn {
-  font-weight: 700 !important;
   margin-right: 1.25rem;
 }
 
@@ -102,6 +100,10 @@
       &::before {
         border: 2px solid $c-blue;
       }
+    }
+
+    &:hover:focus {
+      color: $c-white;
     }
   }
 }

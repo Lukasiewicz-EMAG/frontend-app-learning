@@ -162,8 +162,8 @@ const OutlineTab = ({ intl }) => {
           {rootCourseId && (
             <>
               <div className="row w-100 m-0 mb-3 justify-content-end">
-                <div className="col-12 col-md-auto p-0">
-                  <Button variant="outline-primary" className="expand-all-btn" block onClick={() => { setExpandAll(!expandAll); }}>
+                <div className="col-12 col-md-auto p-0 expand-all-btn">
+                  <Button variant="outline-primary" className="font-weight-bold" block onClick={() => { setExpandAll(!expandAll); }}>
                     {expandAll ? intl.formatMessage(messages.collapseAll) : intl.formatMessage(messages.expandAll)}
                   </Button>
                 </div>
