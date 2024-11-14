@@ -1,3 +1,13 @@
+@mixin collapsible-decorator {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background-color: $c-decoration-color;
+}
+
 .collapsible-trigger {
   position: relative;
   border-bottom: unset !important;
@@ -43,13 +53,14 @@
   }
 }
 
+
 .expand-all-btn {
   font-weight: 700 !important;
   margin-right: 1.25rem;
 }
 
 .btn {
-  border-radius: $c-border-radius !important;
+  // border-radius: $c-border-radius !important;
   transition: background-color $c-transition-time $c-transition-type;
 
   &.btn-brand {

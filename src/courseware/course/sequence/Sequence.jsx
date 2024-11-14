@@ -219,7 +219,7 @@ const Sequence = ({
           {isEnabledOutlineSidebar && renderUnitNavigation(true)}
           {defaultContent}
         </SequenceExamWrapper>
-        <CourseLicense license={license || undefined} />
+        {/* <CourseLicense license={license || undefined} /> */}
       </div>
     );
   }

@@ -1,3 +1,5 @@
+$btn-border-radius: 10px;
+
 @import "~@edx/brand/paragon/fonts";
 @import "~@edx/brand/paragon/variables";
 @import "~@openedx/paragon/scss/core/core";
@@ -6,18 +8,10 @@
 @import "~@edx/frontend-component-footer/dist/footer";
 @import "~@edx/frontend-component-header/dist/index";
 
+$btn-border-radius: 10px;
+
 @import "assets/styles/compass-variables";
 @import "assets/styles/compass";
-
-@mixin collapsible-decorator {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 15px;
-  height: 100%;
-  background-color: $c-decoration-color;
-}
 
 #root {
   display: flex;
