@@ -61,7 +61,7 @@
   .btn {
     &.active {
       &:after {
-        height: 0;
+        height: 0 !important;
       }
 
       &:not(.complete) {
@@ -131,7 +131,7 @@
     }
 
     &:hover:focus {
-      color: $c-white;
+      color: $c-white !important;
     }
   }
 }
