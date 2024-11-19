@@ -5,7 +5,7 @@ $c-decoration-color: #DAE8FF;
 $c-course-tab-txt-color: #6E6E6E;
 $c-course-tab-bg-hover-color: darken($c-decoration-color, 3%);
 $c-course-tab-top-border-color: $c-blue;
-$c-course-tab-bottom-border-color: #b9cef1;
+$c-course-tab-bottom-border-color: $c-blue;
 $c-transition-time: 0.25s;
 $c-transition-type: ease-in-out;
 $c-border-radius: 10px;
