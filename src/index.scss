@@ -32,6 +32,7 @@ $btn-border-radius: 10px;
       top: 0.1em;
       height: 40px;
       margin-right: 1rem;
+      margin-left: $c-logo-left-offset;
       img {
         display: block;
         height: 100%;
