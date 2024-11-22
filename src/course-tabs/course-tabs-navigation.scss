@@ -15,7 +15,7 @@
   .nav a {
     &:not(.active):hover {
       background-color: $c-course-tab-bg-hover-color;
-      border-bottom: none;
+      border-bottom: 1px solid $c-blue;
     }
   }
 
