@@ -33,7 +33,6 @@ const AssignmentTypeCell = ({
               href={`#${footnoteId}-footnote`}
               aria-describedby={`${footnoteId}-footnote`}
               tabIndex={gradesFeatureIsFullyLocked ? '-1' : '0'}
-              aria-labelledby={`assignmentTypeBlockedIcon${assignmentType}`}
             >
               {footnoteMarker}
             </a>
