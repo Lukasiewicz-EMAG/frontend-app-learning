@@ -1,11 +1,22 @@
-@mixin collapsible-decorator {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 15px;
+@import "mixins";
+
+html,
+body {
   height: 100%;
-  background-color: $c-decoration-color;
+}
+
+#root,
+div[data-testid="redux-provider"],
+div[data-testid="browser-router"] {
+    height: 100%;
+}
+
+div[data-testid="browser-router"] {
+  &>div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .collapsible-trigger {

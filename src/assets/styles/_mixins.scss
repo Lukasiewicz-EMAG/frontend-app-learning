@@ -1,0 +1,9 @@
+@mixin collapsible-decorator {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background-color: $c-decoration-color;
+}
