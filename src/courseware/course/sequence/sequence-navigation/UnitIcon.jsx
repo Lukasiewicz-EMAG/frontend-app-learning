@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faVideo, faBook, faEdit, faTasks, faLock,
 } from '@fortawesome/free-solid-svg-icons';
+import { faBook } from '@fortawesome/free-regular-svg-icons';
 
 const UnitIcon = ({ type }) => {
   let icon = null;
