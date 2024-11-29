@@ -13,6 +13,15 @@ const CourseTabsNavigation = ({
 }) => {
   const { show } = useCoursewareSearchState();
 
+  let newTabs = [...tabs];
+  if (tabs.length >= 1) {
+    newTabs.splice(1, 0, {
+      title: 'Moje kursy',
+      slug: 'static_tab_my_courses',
+      url: 'https://apps.dev.cudzoziemiec.emag.lukasiewicz.local/learner-dashboard/',
+    });
+  }
+
   return (
     <div id="courseTabsNavigation" className={classNames('course-tabs-navigation', className)}>
       <div className="container-xl">
@@ -20,7 +29,7 @@ const CourseTabsNavigation = ({
           className="nav-underline-tabs"
           aria-label={intl.formatMessage(messages.courseMaterial)}
         >
-          {tabs.map(({ url, title, slug }) => (
+          {newTabs.map(({ url, title, slug }) => (
             <a
               key={slug}
               className={classNames('nav-item flex-shrink-0 nav-link', { active: slug === activeTabSlug })}
