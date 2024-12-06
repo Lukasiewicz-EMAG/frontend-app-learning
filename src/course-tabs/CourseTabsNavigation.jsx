@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import classNames from 'classnames';
+import { getConfig } from '@edx/frontend-platform';
 
 import messages from './messages';
 import Tabs from '../generic/tabs/Tabs';
@@ -12,13 +13,14 @@ const CourseTabsNavigation = ({
   activeTabSlug, className, tabs, intl,
 }) => {
   const { show } = useCoursewareSearchState();
+  apps.tst.cudzoziemiec.emag.lukasiewicz.local
 
   let newTabs = [...tabs];
   if (tabs.length >= 1) {
     newTabs.splice(1, 0, {
       title: 'Moje kursy',
       slug: 'static_tab_my_courses',
-      url: 'https://apps.dev.cudzoziemiec.emag.lukasiewicz.local/learner-dashboard/',
+      url: `${getConfig().LMS_BASE_URL}/learner-dashboard/`,
     });
   }
 
