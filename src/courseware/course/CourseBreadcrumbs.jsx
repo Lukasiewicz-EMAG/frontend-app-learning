@@ -127,13 +127,6 @@ const CourseBreadcrumbs = ({
     ]),
   );
 
-  // Log the course data and statuses
-  console.log('Course:', course);
-  console.log('courseStatus:', courseStatus);
-  console.log('sequenceStatus:', sequenceStatus);
-
-  // Log the computed object of all sequences in sections
-  console.log('allSequencesInSections:', allSequencesInSections);
 
   const links = useMemo(() => {
     const chapters = [];
@@ -159,19 +152,15 @@ const CourseBreadcrumbs = ({
       });
     }
 
-    // Log the chapters and sequentials arrays before returning
-    console.log('Chapters array:', chapters);
-    console.log('Sequentials array:', sequentials);
 
     return [chapters, sequentials];
   }, [courseStatus, sequenceStatus, allSequencesInSections, sequenceId]);
 
-  // Log the final links array
-  console.log('links:', links);
+
 
   return (
-    <>
-      <h2>{course.title}</h2>
+    <div>
+      <h2 className="text-primary-500">{course.title}</h2><br />
           <nav aria-label="breadcrumb" className="d-inline-block col-sm-10 mb-3">
       <ol className="list-unstyled d-flex flex-nowrap align-items-center m-0">
         <li className="list-unstyled col-auto m-0 p-0">
@@ -202,7 +191,7 @@ const CourseBreadcrumbs = ({
         ))}
       </ol>
     </nav>
-    </>
+    </div>
 
   );
 };
