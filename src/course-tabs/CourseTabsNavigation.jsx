@@ -13,7 +13,6 @@ const CourseTabsNavigation = ({
   activeTabSlug, className, tabs, intl,
 }) => {
   const { show } = useCoursewareSearchState();
-  apps.tst.cudzoziemiec.emag.lukasiewicz.local
 
   let newTabs = [...tabs];
   if (tabs.length >= 1) {
