@@ -15,12 +15,15 @@ const CourseTabsNavigation = ({
   const { show } = useCoursewareSearchState();
 
   let newTabs = [...tabs];
-  if (tabs.length >= 1) {
-    newTabs.splice(1, 0, {
+  if (tabs.length >= 1) { 
+    const myCoursesTab = {
       title: 'Moje kursy',
       slug: 'static_tab_my_courses',
-      url: `${getConfig().LMS_BASE_URL}/learner-dashboard/`,
-    });
+      url: `https://${getConfig().BASE_URL}/learner-dashboard/`,
+    }
+    console.log('myCoursesTab',myCoursesTab)
+    newTabs.splice(1, 0, myCoursesTab);
+
   }
 
   return (
