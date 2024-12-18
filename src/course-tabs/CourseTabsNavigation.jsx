@@ -19,7 +19,7 @@ const CourseTabsNavigation = ({
     const myCoursesTab = {
       title: 'Moje kursy',
       slug: 'static_tab_my_courses',
-      url: `https://${getConfig().BASE_URL}/learner-dashboard/`,
+      url: getConfig().LEARNER_DASHBOARD_URL,
     }
     console.log('myCoursesTab',myCoursesTab)
     newTabs.splice(1, 0, myCoursesTab);
