@@ -6,11 +6,6 @@ const messages = defineMessages({
     defaultMessage: 'Course Material',
     description: 'The accessible label for course tabs navigation',
   },
-  myCourses: {
-    id: 'learn.navigation.course.tabs.myCourses',
-    defaultMessage: 'My Courses',
-    description: 'My courses page',
-  }
 });
 
 export default messages;

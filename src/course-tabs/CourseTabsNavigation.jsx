@@ -18,7 +18,7 @@ const CourseTabsNavigation = ({
 
   let newTabs = [...tabs];
   if (tabs.length >= 1) { 
-    const translatedTitle = intl.formatMessage(messages.myCourses)
+    const translatedTitle = intl.formatMessage(messages.courseMaterial)
     console.log('translatedTitle', translatedTitle)
     const myCoursesTab = {
       title: 'Moje kursy',
