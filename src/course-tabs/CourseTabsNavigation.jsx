@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import classNames from 'classnames';
 import { getConfig } from '@edx/frontend-platform';
-import { useIntl } from '@edx/frontend-platform/i18n';
 
 import messages from './messages';
 import Tabs from '../generic/tabs/Tabs';
@@ -13,22 +12,19 @@ import { useCoursewareSearchState } from '../course-home/courseware-search/hooks
 const CourseTabsNavigation = ({
   activeTabSlug, className, tabs, intl,
 }) => {
-  const intl = useIntl();
   const { show } = useCoursewareSearchState();
 
   let newTabs = [...tabs];
   if (tabs.length >= 1) { 
-    const translatedTitle = intl.formatMessage(messages.courseMaterial)
-    console.log('translatedTitle', translatedTitle)
     const myCoursesTab = {
       title: 'Moje kursy',
       slug: 'static_tab_my_courses',
       url: getConfig().LEARNER_DASHBOARD_URL,
     }
+    console.log('myCoursesTab',myCoursesTab)
     newTabs.splice(1, 0, myCoursesTab);
 
   }
-  console.log('newTabs', newTabs)
 
   return (
     <div id="courseTabsNavigation" className={classNames('course-tabs-navigation', className)}>
