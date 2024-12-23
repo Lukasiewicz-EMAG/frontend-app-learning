@@ -60,7 +60,7 @@ $btn-border-radius: 10px;
     &:hover,
     &:focus,
     &.active {
-      color: $c-blue;
+      color: $c-course-tab-txt-color-active;
       border-bottom-color: $c-blue;
     }
   }
