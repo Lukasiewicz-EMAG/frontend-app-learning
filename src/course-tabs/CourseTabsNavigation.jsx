@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import classNames from 'classnames';
 import { getConfig } from '@edx/frontend-platform';
+import { useIntl } from '@edx/frontend-platform/i18n';
 
 import messages from './messages';
 import Tabs from '../generic/tabs/Tabs';
@@ -13,9 +14,12 @@ const CourseTabsNavigation = ({
   activeTabSlug, className, tabs, intl,
 }) => {
   const { show } = useCoursewareSearchState();
+  const intl = useIntl();
 
   let newTabs = [...tabs];
   if (tabs.length >= 1) { 
+    const translateTest = intl.formatMessage(messages.courseMaterial);
+    console.log('translateTest', translateTest)
     const myCoursesTab = {
       title: 'Moje kursy',
       slug: 'static_tab_my_courses',
