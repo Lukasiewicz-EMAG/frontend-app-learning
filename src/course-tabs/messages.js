@@ -7,7 +7,7 @@ const messages = defineMessages({
     description: 'The accessible label for course tabs navigation',
   },
     myCourses: {
-    id: 'learn.navigation.course.tabs.my_courses',
+    id: 'learn.navigation.course.tabs.myCourses',
     defaultMessage: 'My Courses',
     description: 'The accessible label for course tabs navigation',
   },
