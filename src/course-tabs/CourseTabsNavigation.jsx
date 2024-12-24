@@ -13,17 +13,14 @@ const CourseTabsNavigation = ({
   activeTabSlug, className, tabs, intl,
 }) => {
   const { show } = useCoursewareSearchState();
-
   let newTabs = [...tabs];
   if (tabs.length >= 1) { 
     const translateTest = intl.formatMessage(messages.myCourses);
-    console.log('translateTest', translateTest)
     const myCoursesTab = {
-      title: 'Moje kursy',
+      title: translateTest,
       slug: 'static_tab_my_courses',
       url: getConfig().LEARNER_DASHBOARD_URL,
     }
-    console.log('myCoursesTab',myCoursesTab)
     newTabs.splice(1, 0, myCoursesTab);
 
   }
